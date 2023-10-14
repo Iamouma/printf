@@ -14,6 +14,8 @@ Here’s a simple example:
 int age = 30;
 printf("I am %d years old.", age);
 In this example, "I am %d years old." is the format string, and %d is the format specifier. The %d specifier tells printf to expect an integer value, which is provided as age.
+
+
 2. Handling Variable Numbers of Arguments:
 One of the unique features of printf is its ability to accept a variable number of arguments. This is accomplished using variadic functions in C. The printf function, like many other standard C library functions, is declared with the stdarg.h header to enable this functionality.
 
