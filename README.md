@@ -88,3 +88,19 @@ For example:
 double pi = 3.14159265;
 printf("Value of pi: %.2f", pi);
 In this case, %.2f specifies that the pi variable should be formatted as a floating-point number with two decimal places.
+5. ## Contributing
+
+We welcome contributions from the community. To get started, follow these steps:
+
+1. **Fork the Repository:** Click the "Fork" button at the top of this repository to create your copy.
+
+2. **Clone Your Fork:** In your local development environment, clone your fork using the following command:
+
+3. **Create a Branch:** Create a new branch for your work:
+
+4. **Make Changes:** Make your desired changes and improvements in your local branch.
+
+5. **Test Your Changes:** Before submitting a pull request, make sure to test your changes and ensure they work as expected.
+
+6. **Commit Your Changes:** Commit your changes and provide a clear and descriptive commit message.
+
