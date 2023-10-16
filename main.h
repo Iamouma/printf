@@ -10,14 +10,14 @@
 
 /**
  * struct function_s - structure holding an identifier and a function
- * @identifier: character identifying action
- * @print_function: function excecuted when identifier is identified
+ * @c: character identifying action
+ * @print_fun: function excecuted when 'c' is identified
 */
 
 typedef struct function_s
 {
-	char *identifier;
-	int (*print_function)(va_list args);
+	char *c;
+	int (*print_fun)(va_list args);
 } function_t;
 
 
