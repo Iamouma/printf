@@ -10,7 +10,8 @@ int _printf(const char *format, ...)
 	int len, count, num_b = 0;
 
 	prints_d data[] = {
-		{"c", p_c}, {"s", p_s}, {"%", per_cent}, {"d", df}, {"i", df}, {"b", bn}
+		{"c", p_c}, {"s", p_s}, {"%", per_cent}, {"d", df}, {"i", df}, {"b", bn},
+		{"c", dcc}, {"S", p_s}
 	};
 	va_start(args, format);
 	if (!format)
