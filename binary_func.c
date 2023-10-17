@@ -75,7 +75,5 @@ int print_dig_c(long int len, long int n)
 	_putchar(len % 10 + '0');
 	n++;
 
-	_putchar('\n');
-
 	return (n);
 }

@@ -43,7 +43,5 @@ int p_s(va_list args)
 int per_cent(va_list args __attribute__((unused)))
 {
 	_putchar('%');
-	_putchar('\n');
-
 	return (1);
 }

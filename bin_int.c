@@ -40,7 +40,5 @@ int bn(va_list args)
 		len = len >> 1;
 	}
 
-	_putchar('\n');
-
 	return (n);
 }
