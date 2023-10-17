@@ -1,51 +1,48 @@
 #include "main.h"
-
 /**
- * _printf - function to replicate printf
- * @format: format to be printed.
- * Return: 0 if successful.
+ * _printf - produces output according to format.
+ * @format: format and character string to be printed.
+ * Return: 0 Success.
  */
-
 int _printf(const char *format, ...)
 {
 	va_list args;
-	int i, j, no_c = 0;
+	int len, count, num_b = 0;
 
-	print_d data[] = {
-		{"c", p_c}, {"s", p_s}, {"%", per_cent}, {"d", df}, {"u", dcc}, {"i", df},
-		{"b", bn},
+	prints_d data[] = {
+		{"c", p_c}, {"s", p_s}, {"%", per_cent}, {"d", df}, {"i", df}, {"b", bn}
 	};
 	va_start(args, format);
 	if (!format)
 		return (-1);
-	for (i = 0; format[i]; i++)
+	for (len = 0; format[len]; len++)
 	{
-		if (format[i] != '%')
+		if (format[len] != '%')
 		{
-			_putchar(format[i]);
-			no_c++;
+			_putchar(format[len]);
+			num_b++;
 		}
 		else
 		{
-			if (!format[i + 1] || format[i + 1] == ' ')
+			if (!format[len + 1] || format[len + 1] == ' ')
 				return (-1);
-			for (j = 0; j < 8; j++)
+			for (count = 0; count < 8; count++)
 			{
-				if (format[i + 1] == *(data[j].c))
+				if (format[len + 1] == *(data[count].c))
 					break;
 			}
-			if (j < 8)
+			if (count < 8)
 			{
-				no_c = no_c + data[j].f_pr(args);
-				i++;
+				num_b = num_b + data[count].func_p(args);
+				len++;
 			}
 			else
 			{
-				_putchar(format[i]);
-				no_c++;
+				_putchar(format[len]);
+				num_b++;
 			}
 		}
 	}
 	va_end(args);
-	return (no_c);
+	return (num_b);
 }

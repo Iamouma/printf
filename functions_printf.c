@@ -1,9 +1,9 @@
 #include "main.h"
 
 /**
- * p_c - print character.
- * @args: list of argument
- * Return: 0 if successful.
+ * p_c - prints a character.
+ * @args: list of arguments.
+ * Return: 0 Success.
  */
 int p_c(va_list args)
 {
@@ -14,20 +14,9 @@ int p_c(va_list args)
 }
 
 /**
- * per_cent - print percentage.
+ * p_s - prints a string.
  * @args: list of arguments.
- * Return: 0 if successful.
- */
-int per_cent(va_list args __attribute__((unused)))
-{
-	_putchar('%');
-	return (1);
-}
-
-/**
- * p_s - print string
- * @args: list of arguments.
- * Return: the number of characters in string.
+ * Return: The number of characters in a string.
  */
 int p_s(va_list args)
 {
@@ -44,4 +33,15 @@ int p_s(va_list args)
 	}
 
 	return (i);
+}
+
+/**
+ * per_cent - prints a percentage.
+ * @args: list of arguments.
+ * Return: 0 Success.
+ */
+int per_cent(va_list args __attribute__((unused)))
+{
+	_putchar('%');
+	return (1);
 }

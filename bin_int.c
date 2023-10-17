@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * bn - converts to integer.
+ * bn - turns binary to integer.
  * @args: list of arguments.
  * Return: number of integers.
  */

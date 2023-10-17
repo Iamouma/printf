@@ -1,28 +1,27 @@
 #include "main.h"
 
 /**
- * df - collects integer value and calls function to print.
+ * df - picks integer value and calls function to print.
  * @args: list of arguments.
- * Return: length of integer.
+ * Return: length of string.
  */
 int df(va_list args)
 {
 	long int len = va_arg(args, int);
 	long int n;
 
-	n = print_dig(len, 0);
+	n = print_dif(len, 0);
 
 	return (n);
 }
 
-
 /**
- * print_dig - prints signed integers.
- * @len: integer to be printed
+ * print_dif - prints signed integers.
+ * @len: integer to be printed.
  * @n: length of integer to be printed.
  * Return: length of integer.
  */
-int print_dig(long int len, long int n)
+int print_dif(long int len, long int n)
 {
 	if (len < 0)
 	{
@@ -32,7 +31,7 @@ int print_dig(long int len, long int n)
 	}
 	if (len / 10)
 	{
-		n = print_dig(len / 10, n++);
+		n = print_dif(len / 10, n++);
 	}
 	_putchar(len % 10 + '0');
 	n++;
@@ -40,30 +39,28 @@ int print_dig(long int len, long int n)
 	return (n);
 }
 
-
 /**
- * dcc - collects integer value and calls function to print.
- * @args: argument value here int.
- * Return: n length of int.
+ * dcc - picks integer value and calls function to print.
+ * @args: list of arguments.
+ * Return: length of integer.
  */
 int dcc(va_list args)
 {
 	long int len = va_arg(args, int);
 	long int n;
 
-	n = print_dig_u(len, 0);
+	n = print_dig_c(len, 0);
 
 	return (n);
 }
 
-
 /**
- * print_dig_u - prints unsigned integers.
- * @len: integer to be printed
- * @n: length of integer
- * Return: n length of integer.
+ * print_dig_c - prints unsigned integers.
+ * @len: integer to be printed.
+ * @n: length of integer.
+ * Return: length of integer.
  */
-int print_dig_u(long int len, long int n)
+int print_dig_c(long int len, long int n)
 {
 	if (len < 0)
 	{
@@ -73,7 +70,7 @@ int print_dig_u(long int len, long int n)
 
 	if (len / 10)
 	{
-		n = print_dig_u(len / 10, n++);
+		n = print_dig_c(len / 10, n++);
 	}
 	_putchar(len % 10 + '0');
 	n++;
